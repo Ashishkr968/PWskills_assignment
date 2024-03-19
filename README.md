@@ -1,1 +1,23 @@
-
+Primary keys uniquely identify each record in their respective tables (eg., movie_id,actor_id) while foreign keys establish relationships between tables by referencing the primary key of another table (eg., movie_id in movie_actor table refrences movie_id in movie table).  SELECT * FROM information_schema.key_column_usage;
+Select * from actor;
+Select * from customer;
+Select distinct country from country;
+Select customer_id, first_name, last_name, email from customer WHERE `active`=1
+Select rental_id from rental where customer_id=1;
+Select film_id, title from film where rental_duration > 5;
+Select count(*) from film where replacement_cost > 15 and replacement_cost < 20;
+Select count(distnict first_name) from actor;
+Select * from customer limit 10;
+Select * from customer where first_name like 'b%' limit 3;
+Select title from film where rating = 'G' limit 5;
+Select * from customer where first_name like "a%";
+Select * from customer where first_name like "%a";
+Select city from city where city like 'a%%a' limit 4;
+Select first_name from customer where first_name like '%ni%';
+Select first_name from customer where first_name like '_r%';
+Select first_name from  customer where first_name like 'a____%';
+Select first_name from customer where first_name like 'a%o';
+Select title from film where rating in ('PG', 'PG-13');
+Select * from film where length between 50 and 100;
+Select * from actor limit 50;
+Select distinct film_id from inventory;
